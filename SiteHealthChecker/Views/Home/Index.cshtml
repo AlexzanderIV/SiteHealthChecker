@@ -1,0 +1,29 @@
+﻿@model WebResourceViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Web resources status</h2></div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Resource name</th>
+                <th>Resource Uri</th>
+                <th>Status</th>
+                <th>Last updated</th>
+            </tr>
+        </thead>
+
+        @foreach (var webResource in Model.Items)
+        {
+        <tr>
+            <td>@webResource.Name</td>
+            <td>@webResource.Uri</td>
+            <td><span class="@(webResource.IsAvailable ? "glyphicon glyphicon-ok green" : "glyphicon glyphicon-remove red")"></span>&nbsp;(@webResource.StatusCode)</td>
+            <td>@webResource.LastUpdated.ToString("dd.MM.yyyy hh:mm:ss")</td>
+        </tr>
+        }
+    </table>
+</div>

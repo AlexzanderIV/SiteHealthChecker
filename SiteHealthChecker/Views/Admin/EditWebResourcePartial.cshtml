@@ -1,0 +1,16 @@
+﻿@model WebResource
+
+<form asp-action="Edit" method="POST">
+    <div class="form-group">
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Uri">Uri:</label>
+        <input asp-for="Uri" class="form-control" />
+        <span asp-validation-for="Uri" class="text-danger"></span>
+    </div>
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-primary">Back</a>
+</form>

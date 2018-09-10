@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  sitehealthchecker:
+    image: sitehealthchecker
+    build:
+      context: .
+      dockerfile: SiteHealthChecker\Dockerfile

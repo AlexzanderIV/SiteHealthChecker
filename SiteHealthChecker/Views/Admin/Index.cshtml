@@ -1,0 +1,36 @@
+﻿@model WebResourceViewModel
+@{
+    ViewData["Title"] = "Manage Web resources";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Manage Web resources</h2></div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Resource name</th>
+                <th>Resource Uri</th>
+                <th>Status</th>
+                <th>Last updated</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        @foreach (var webResource in Model.Items)
+        {
+            <tr>
+                <td>@webResource.Name</td>
+                <td>@webResource.Uri</td>
+                <td><span class="@(webResource.IsAvailable ? "glyphicon glyphicon-ok green" : "glyphicon glyphicon-remove red")"></span>&nbsp;(@webResource.StatusCode)</td>
+                <td>@webResource.LastUpdated.ToString("dd.MM.yyyy hh:mm:ss")</td>
+                <td><a asp-action="Edit" asp-route-id="@webResource.Id"><span class="glyphicon glyphicon-edit"></span>&nbsp;Edit</a> / 
+                    <a href="javascript:deleteWebResource('@webResource.Name', '@webResource.Id')"><span class="glyphicon glyphicon-trash"></span>&nbsp;Delete</a></td>
+            </tr>
+        }
+    </table>
+
+    <div class="panel-footer add-item-form">
+        @await Html.PartialAsync("AddWebResourcePartial", new WebResource())
+    </div>
+</div>

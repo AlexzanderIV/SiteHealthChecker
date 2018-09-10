@@ -1,0 +1,14 @@
+﻿@model WebResource
+
+<form asp-action="AddWebResource" method="POST">
+    <h3>Add a new Web resource:</h3>
+    <div class="form-group">
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Uri">Uri:</label>
+        <input asp-for="Uri" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
