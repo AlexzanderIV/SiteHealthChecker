@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteHealthChecker", "SiteHealthChecker\SiteHealthChecker.csproj", "{5A216BDD-0660-4896-ACC8-DAAFD0AD90E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteHealthChecker", "SiteHealthChecker\SiteHealthChecker.csproj", "{5A216BDD-0660-4896-ACC8-DAAFD0AD90E0}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{7A32632B-25A8-4F2C-A477-A3D85C7DE499}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteHealthChecker.UnitTests", "SiteHealthChecker.UnitTests\SiteHealthChecker.UnitTests.csproj", "{DE07B8F3-2D2C-4B1B-A0BB-ED59E8649437}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7A32632B-25A8-4F2C-A477-A3D85C7DE499}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A32632B-25A8-4F2C-A477-A3D85C7DE499}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A32632B-25A8-4F2C-A477-A3D85C7DE499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE07B8F3-2D2C-4B1B-A0BB-ED59E8649437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE07B8F3-2D2C-4B1B-A0BB-ED59E8649437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE07B8F3-2D2C-4B1B-A0BB-ED59E8649437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE07B8F3-2D2C-4B1B-A0BB-ED59E8649437}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
